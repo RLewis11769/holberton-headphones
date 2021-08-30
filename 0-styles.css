@@ -23,7 +23,7 @@
 /* Variables
    ============================= */
 
-:root {
+   :root {
 	--color-primary: #ff6565;
 	--color-white: #ffffff;
 
@@ -205,24 +205,24 @@ a:hover, a:active {
 /* Hero Section
    ============================= */
 
-.text {
+.section-hero {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.section-hero {
+.section-title {
 	position: relative;
 	top: 30rem;
 }
 
-.section-sub {
+.section-title h2 {
 	margin-top: -1.5rem;
 }
 
 .section-body {
 	position: relative;
-	top: 40rem;
+	top: 35rem;
 	width: 65rem;
 	line-height: 2.5rem;
 	font-size: var(--text-font-size);
@@ -301,15 +301,12 @@ a:hover, a:active {
 
 	/* Section Hero */
 
-	.section-hero {
-		top: 25rem;
-	}
-
 	.section-title {
+		top: 25rem;
 		width: 35rem;
 	}
 
-	.section-sub {
+	.section-title h2 {
 		width: 25rem;
 		margin-top: -1rem;
 		margin-left: auto;
@@ -322,6 +319,6 @@ a:hover, a:active {
 	}
 
 	.button {
-		margin-top: 1.5rem;
+		margin-top: 1rem;
 	}
 }
