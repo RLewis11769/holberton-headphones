@@ -260,10 +260,12 @@ a:hover, a:active {
 }
 
 .section-title {
+	position: relative;
 	top: 8.5rem;
 }
 
 .section-body {
+	position: relative;
 	top: 10rem;
 	margin-left: auto;
 	margin-right: auto;
