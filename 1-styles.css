@@ -212,16 +212,16 @@ a:hover, a:active {
 	align-items: center;
 }
 
-.section-title {
+.hero-title {
 	position: relative;
 	top: 30rem;
 }
 
-.section-title h2 {
+.hero-title h2 {
 	margin-top: -1.5rem;
 }
 
-.section-body {
+.hero-body {
 	position: relative;
 	top: 35rem;
 	width: 65rem;
@@ -259,11 +259,11 @@ a:hover, a:active {
 	height: 75vh;
 }
 
-.section-what .section-title {
+.section-title {
 	top: 8.5rem;
 }
 
-.section-what .section-body {
+.section-body {
 	top: 10rem;
 	margin-left: auto;
 	margin-right: auto;
@@ -362,19 +362,19 @@ a:hover, a:active {
 
 	/* Section Hero */
 
-	.section-title {
+	.hero-title {
 		top: 25rem;
 		width: 35rem;
 	}
 
-	.section-title h2 {
+	.hero-title h2 {
 		width: 25rem;
 		margin-top: -1rem;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	.section-body {
+	.hero-body {
 		width: 33.5rem;
 		top: 30rem;
 	}
@@ -385,13 +385,13 @@ a:hover, a:active {
 
 	/* Section What We Do */
 
-	.section-what .section-title {
+	.section-title {
 		margin-left: auto;
 		margin-right: auto;
 		top: 10rem;
 	}
 
-	.section-what .section-body {
+	.section-body {
 		top: 12rem;
 	}
 
