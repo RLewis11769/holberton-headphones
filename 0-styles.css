@@ -97,6 +97,7 @@ a:hover, a:active {
 	background-size: cover;
 	width: 100%;
 	height: 100vh;
+	/* display: flex; */
 }
 
 .off-screen {
@@ -107,13 +108,10 @@ a:hover, a:active {
 /* Header
    ============================= */
 
-.header {
-	display: flex;
-}
-
 .header-container {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .header-logo {
@@ -278,6 +276,10 @@ a:hover, a:active {
 		display: block;
 	}
 
+	.header-logo {
+		width: 200%;
+	}
+
 	/* Navbar */
 
 	.navbar-menu {
@@ -293,6 +295,7 @@ a:hover, a:active {
 
 	.header .menu-icon .navicon {
 		display: block;
+		left: 5rem;
 	}
 
 	.nav .nav-item + .nav-item {
