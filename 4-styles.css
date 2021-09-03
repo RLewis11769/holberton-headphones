@@ -3,15 +3,22 @@
 		- Normalize
 		- Variables
 		- Base
+			- Fonts
+			- Links
+			- Buttons
 		- Helpers
 	2. Layout
-		- General
 		- Header
 		- Navbar
-		- Menu button hamburger
+			- Menu button hamburger
 		- Hero
-		- Button
+		- What We Do
+		- Results
+		- Form
+		- Footer
 	3. Mobile
+		- Tablet
+		- Mobile
 */
 
 /*** 1. GLOBAL ***/
@@ -28,17 +35,21 @@
 	--color-primary: #ff6565;
 	--color-white: #ffffff;
 	--color-black: #071629;
+	--color-gray: #979797;
 
-	--font-family: 'Source Sans Pro', sans-serif;
+	--text-font-family: 'Source Sans Pro', sans-serif;
 	--icon-font-family: 'holberton_school-icon';
+
 	--font-weight-regular: 400;
 	--font-weight-bold: 700;
 
-	--button-font-size: 1.4rem;
-	--text-font-size: 1.6rem;
+	--font-size-medium: 1.6rem;
 	--font-size-small: 1.4rem;
+	--font-size-xsmall: 1.2rem;
+
 	--h1-font-size: 3.2rem;
 	--h2-font-size: 1.6rem;
+	--button-font-size: 1.4rem;
 	--icon-font-size: 10rem;
 	--social-font-size: 3rem;
 }
@@ -55,16 +66,24 @@ html {
 	font-size: 62.5%;
 }
 
+.container {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Fonts */
+
 body {
 	color: var(--color-white);
-	font-family: var(--font-family);
+	font-family: var(--text-font-family);
 	font-weight: var(--font-weight-regular);
-	font-size: var(--text-font-size);
+	font-size: var(--font-size-medium);
 	text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--font-family);
+	font-family: var(--text-font-family);
 	font-weight: var(--font-weight-bold);
 }
 
@@ -76,6 +95,8 @@ h2 {
 	font-size: var(--h2-font-size);
 }
 
+/* Links */
+
 a {
 	color: var(--color-white);
 	text-decoration: none;
@@ -83,6 +104,26 @@ a {
 
 a:hover, a:active {
 	color: var(--color-primary);
+}
+
+/* Buttons */
+
+.button {
+	display: inline-block;
+	background: var(--color-primary);
+	font-weight: var(--font-weight-bold);
+	font-family: var(--text-font-family);
+	font-size: var(--button-font-size);
+	text-transform: uppercase;
+	width: 16rem;
+	height: 4.5rem;
+	border-radius: 22px;
+	padding: 1.5rem;
+}
+
+.button:hover, .button:focus {
+	color: var(--color-white);
+	opacity: 0.9;
 }
 
 /* Helpers
@@ -104,35 +145,30 @@ a:hover, a:active {
 
 /*** 2. LAYOUT ***/
 
-/* General Layout
+/* Header
    ============================= */
 
-.container {
-	max-width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.background {
+.header {
 	background-image: url('images/headphones_hero_1.jpg');
 	background-repeat: no-repeat;
 	background-position: 90%;
 	background-size: cover;
-	width: 100%;
 	height: 100vh;
 }
-
-/* Header
-   ============================= */
 
 .header-container {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .header-logo {
 	padding: 3rem;
+}
+
+.header-button {
+	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	margin-top: 3.5rem;
 }
 
 .header .menu-icon {
@@ -151,9 +187,9 @@ a:hover, a:active {
 .header .menu-icon .navicon::before, .header .menu-icon .navicon::after {
 	content: '';
 	display: block;
+	position: absolute;
 	width: 100%;
 	height: 100%;
-	position: absolute;
 	background-color: var(--color-white);
 	transition: all .2s ease-out;
 }
@@ -175,16 +211,18 @@ a:hover, a:active {
 	display: flex;
 	font-weight: var(--font-weight-bold);
 	list-style: none;
+	margin: 0;
+	text-align: center;
 }
 
 .nav .nav-item + .nav-item {
-	margin: 0 0 0 3rem;
+	margin-left: 3rem;
 }
 
-.nav .nav-link {
+/* .nav .nav-link {
 	display: block;
 	position: relative;
-}
+} */
 
 /* Menu button hamburger */
 
@@ -242,35 +280,12 @@ a:hover, a:active {
 	line-height: 2.5rem;
 }
 
-/* Button
-   ============================= */
-
-.button {
-	display: inline-block;
-	background: var(--color-primary);
-	font-weight: var(--font-weight-bold);
-	font-family: var(--font-family);
-	font-size: var(--button-font-size);
-	text-transform: uppercase;
-	width: 16rem;
-	height: 4.5rem;
-	border-radius: 22px;
-	padding: 1.5rem;
-	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-	margin-top: 3.5rem;
-}
-
-.button:hover, .button:focus {
-	color: var(--color-white);
-	opacity: 0.9;
-}
-
 /* What We Do Section
    ============================= */
 
 .section-what {
 	color: var(--color-black);
-	height: 75vh;
+	height: 75rem;
 }
 
 .section-title {
@@ -279,18 +294,24 @@ a:hover, a:active {
 }
 
 .section-body {
-	top: 10rem;
+	top: 15rem;
 	position: relative;
+	line-height: 2.5rem;
+	width: 65rem;
 	margin-left: auto;
 	margin-right: auto;
-	line-height: 2.5rem;
 }
 
 .section-column {
-	display: flex;
-	justify-content: space-around;
 	position: relative;
 	top: 15rem;
+}
+
+.row {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .icon {
@@ -320,7 +341,7 @@ a:hover, a:active {
 	line-height: 2.5rem;
 	font-size: var(--font-size-small);
 	color: var(--color-black);
-	font-family: var(--font-family);
+	font-family: var(--text-font-family);
 }
 
 /* Results Section
@@ -338,9 +359,10 @@ a:hover, a:active {
 	background-image: url('images/pentagone.png');
 	background-size: cover;
 	display: flex;
-	align-items: center;
+	justify-content: center;
 	height: 17rem;
 	width: 18rem;
+	margin: 2rem;
 }
 
 .pentagon .icon-text {
@@ -384,7 +406,7 @@ input[type="text"], input[type="email"] {
 	width: 100%;
 	padding: 2rem;
 	border: none;
-	border-bottom: .1rem solid rgb(230, 226, 226);
+	border-bottom: .1rem solid var(--color-gray);
 	box-shadow: none;
 	outline: 0;
 }
@@ -395,12 +417,13 @@ input[type="text"], input[type="email"] {
 	font-size: 1.4rem;
 }
 
-.submit {
-	filter: none;
+.form-button {
 	align-self: center;
+	position: relative;
+	top: 3.5rem;
 }
 
-/* Hero Section
+/* Footer
    ============================= */
 
 .footer {
@@ -436,103 +459,46 @@ input[type="text"], input[type="email"] {
 }
 
 .copyright {
-	font-size: 1.2rem;
-	opacity: 50%;
+	font-size: var(--font-size-xsmall);
+	color: var(--color-gray);
 	position: relative;
 	top: 5rem;
 }
 
 /*** 3. MEDIA QUERIES ***/
 
-@media screen and (min-width: 481px) and (max-width: 767px) {
-	/* Base */
+/* Tablet
+   ============================= */
 
-	/* Section */
-	.section-column {
-		flex-wrap: wrap;
-	}
-}
-
-/* @media (max-width: 480px) {
-    .header-logo {
-      flex-basis: 70%;
-    }
-  }
-
-  @media (min-width: 481px) and (max-width: 767px) {
-    .header-logo {
-      flex-basis: 79%;
-    }
-  } */
-
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 481px) and (max-width: 769px) {
 	/* Base */
 
 	html {
-		font-size: 57%;
-	}
-
-	.background {
-		background-position: 40%;
+		font-size: 60%;
 	}
 
 	/* Header */
 
-	.header-container {
-		flex-direction: row-reverse;
-	}
-
-	.header .menu-icon {
-		display: block;
-	}
-
-	.header-logo {
-		width: 100%;
-	}
-
-	/* Navbar */
-
-	.navbar-menu {
-		display: none;
-		flex: 1;
-	}
-
-	.header .nav {
-		flex-direction: column;
-		overflow: hidden;
-		transition: max-height 0.2s ease-out;
-	}
-
-	.header .menu-icon .navicon {
-		display: block;
-		left: 5rem;
-	}
-
-	.nav .nav-item + .nav-item {
-		margin: 1.5rem 0 0;
+	.header {
+		background-position: 40%;
+		height: 90vh;
 	}
 
 	/* Hero Section */
 
 	.hero-title {
-		top: 25rem;
-		width: 35rem;
+		top: 35rem;
 	}
 
 	.hero-title h2 {
-		width: 25rem;
 		margin-top: -1rem;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	.hero-body {
-		width: 33.5rem;
-		top: 30rem;
-	}
-
-	.button {
-		margin-top: 1rem;
+		top: 40rem;
+		width: 60rem;
 	}
 
 	/* Sections */
@@ -545,25 +511,19 @@ input[type="text"], input[type="email"] {
 
 	.section-body {
 		top: 9rem;
-		width: 30rem;
-	}
-
-	.section-column {
-		flex-direction: column;
-		align-items: center;
-		top: 15rem;
+		width: 60rem;
 	}
 
 	/* What We Do Section */
 
 	.section-what {
-		height: 160vh;
+		height: 85vh;
 	}
 
 	/* Results Section */
 
 	.section-results {
-		height: 160vh;
+		height: 85vh;
 	}
 
 	.pentagon {
@@ -581,8 +541,106 @@ input[type="text"], input[type="email"] {
 
 	.footer {
 		height: 30rem;
+		padding: 5rem;
 	}
-	
+}
+
+/* Mobile
+   ============================= */
+
+@media screen and (max-width: 480px) {
+	/* Base */
+
+	html {
+		font-size: 57%;
+	}
+
+	/* Header */
+
+	.header {
+		background-position: 40%;
+	}
+
+	.header-container {
+		flex-wrap: wrap;
+		flex-direction: row-reverse;
+	}
+
+	.header .menu-icon {
+		display: block;
+	}
+
+	.header-logo {
+		flex-basis: 70%;
+	}
+
+	/* Navbar */
+
+	.navbar-menu {
+		display: none;
+		flex: 1;
+	}
+
+	.header .nav {
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	.nav .nav-item + .nav-item {
+		margin-top: 1.5rem;
+	}
+
+	/* Hero Section */
+
+	.hero-title {
+		top: 20rem;
+		width: 35rem;
+	}
+
+	.hero-title h2 {
+		margin-left: auto;
+		margin-right: auto;
+		width: 25rem;
+	}
+
+	.hero-body {
+		width: 33.5rem;
+		top: 25rem;
+	}
+
+	/* Sections */
+
+	.section-title {
+		margin-left: auto;
+		margin-right: auto;
+		width: 25rem;
+	}
+
+	.section-body {
+		width: 30rem;
+	}
+
+	/* What We Do Section */
+
+	.section-what {
+		height: 150vh;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Results Section */
+
+	.section-results {
+		height: 150vh;
+	}
+
+	/* Footer */
+
+	.footer {
+		height: 30rem;
+		padding: 5rem;
+	}
+
 	.footer-container {
 		flex-direction: column;
 	}
