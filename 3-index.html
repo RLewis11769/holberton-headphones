@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Holberton Headphones</title>
+	<link rel="stylesheet" href="3-styles.css">
+</head>
+
+<body>
+	<!-- Skip links -->
+	<nav aria-label="Skip links">
+		<ul class="off-screen">
+			<li>
+				<a href="#a11y-primary-nav" class="skip-link">Skip to primary navigation</a>
+			</li>
+			<li>
+				<a href="#a11y-main-content" class="skip-link">Skip to main content</a>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- Header -->
+	<header class="header background">
+		<div class="container">
+			<div class="header-container">
+				<div class="header-logo">
+					<a href="#">
+						<img src="images/logo_headphones.png" alt="logo" width="161" height="32">
+					</a>
+				</div>
+				<!-- Navigation -->
+				<input class="menu-btn" type="checkbox" id="menu-btn">
+				<label class="menu-icon" for="menu-btn">
+					<span class="navicon"></span>
+				</label>
+				<nav class="navbar-menu" id="a11y-primary-nav" tabindex="-1">
+					<ul class="nav">
+						<li class="nav-item">
+							<a href="#" class="nav-link">what we do</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">our results</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">contact us</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- Hero Section -->
+			<section class="section-hero" id="a11y-main-content" tabindex="-1">
+				<div class="hero-title">
+					<h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+					<h2>Lorem ipsum dolor set amet lorem ipsum dolor set</h2>
+					<a href="#" class="button">Call to action</a>
+				</div>
+				<div class="hero-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+						voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				</div>
+			</section>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<main>
+
+		<!-- What We Do Section -->
+		<div class="section-what">
+			<div class="container">
+				<div class="section-title">
+					<h1>What we do...</h1>
+				</div>
+				<div class="section-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore
+						et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+						ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum
+						dolore eu fugiat nulla pariatur.</p>
+				</div>
+				<div class="section-column">
+					<div class="icon section-image-1">
+						<div class="icon-text">
+							<h2>Lorem ipsum</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="icon section-image-2">
+						<div class="icon-text">
+							<h2>Lorem ipsum</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="icon section-image-3">
+						<div class="icon-text">
+							<h2>Lorem ipsum</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="icon section-image-4">
+						<div class="icon-text">
+							<h2>Lorem ipsum</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Our Results Section -->
+		<div class="section-results">
+			<div class="container">
+				<div class="section-title">
+					<h1>Our results speak for themselves</h1>
+				</div>
+				<div class="section-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore
+						et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+						ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum
+						dolore eu fugiat nulla pariatur.</p>
+				</div>
+				<div class="section-column">
+					<div class="pentagon">
+						<div class="icon-text">
+							<h2>+2%</h2>
+							<p>Lorem ipsum dolor</p>
+						</div>
+					</div>
+					<div class="pentagon">
+						<div class="icon-text">
+							<h2>+2%</h2>
+							<p>Lorem ipsum dolor</p>
+						</div>
+					</div>
+					<div class="pentagon">
+						<div class="icon-text">
+							<h2>+2%</h2>
+							<p>Lorem ipsum dolor</p>
+						</div>
+					</div>
+					<div class="pentagon">
+						<div class="icon-text">
+							<h2>+2%</h2>
+							<p>Lorem ipsum dolor</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Form Section -->
+		<div class="section-form">
+			<div class="container">
+				<h1>Contact Us</h1>
+				<form action="#" method="post">
+					<fieldset>
+						<legend class="visually-hidden">Your personal information</legend>
+						<div class="form-group">
+							<div class="form-field">
+								<span class="form-field-container">
+									<input type="text" name="your-first-name" id="your-first-name"
+									placeholder="Name"
+										pattern="[A-Za-zÀ-ž\s]{3,}" maxlength="35"
+										autocomplete="on" accesskey="f" required="true">
+									<i class="form-field-icon"></i>
+								</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-field">
+								<span class="form-field-container">
+									<input type="email" name="your-email" id="your-email" placeholder="Email"
+										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="55"
+										autocomplete="on" accesskey="e" required="true">
+									<i class="form-field-icon"></i>
+								</span>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend class="visually-hidden">Your comment</legend>
+						<div class="form-group">
+							<div class="form-field">
+								<span class="form-field-container">
+									<input type="text" name="your-comment" id="your-comment"
+										placeholder="Your message" minlength="10" accesskey="c"
+										required="true"></textarea>
+								</span>
+							</div>
+						</div>
+					</fieldset>
+					<a href="#" class="button submit">Call to action</a>
+				</form>
+			</div>
+		</div>
+
+	</main>
+
+</body>
+
+</html>
