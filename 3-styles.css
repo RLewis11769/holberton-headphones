@@ -3,15 +3,22 @@
 		- Normalize
 		- Variables
 		- Base
+			- Fonts
+			- Links
+			- Buttons
 		- Helpers
 	2. Layout
-		- General
 		- Header
 		- Navbar
-		- Menu button hamburger
-		- Hero
-		- Button
+		- Menu Button
+		- Sections
+		- Hero Section
+		- What We Do Section
+		- Results Section
+		- Form
 	3. Mobile
+		- Tablet
+		- Mobile
 */
 
 /*** 1. GLOBAL ***/
@@ -28,18 +35,23 @@
 	--color-primary: #ff6565;
 	--color-white: #ffffff;
 	--color-black: #071629;
+	--color-gray: #979797;
 
-	--font-family: 'Source Sans Pro', sans-serif;
+	--text-font-family: 'Source Sans Pro', sans-serif;
 	--icon-font-family: 'holberton_school-icon';
+
 	--font-weight-regular: 400;
 	--font-weight-bold: 700;
 
-	--button-font-size: 1.4rem;
-	--text-font-size: 1.6rem;
+	--font-size-medium: 1.6rem;
 	--font-size-small: 1.4rem;
+	--font-size-xsmall: 1.2rem;
+
 	--h1-font-size: 3.2rem;
 	--h2-font-size: 1.6rem;
+	--button-font-size: 1.4rem;
 	--icon-font-size: 10rem;
+	--social-font-size: 3rem;
 }
 
 /* Base
@@ -54,16 +66,24 @@ html {
 	font-size: 62.5%;
 }
 
+.container {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Fonts */
+
 body {
 	color: var(--color-white);
-	font-family: var(--font-family);
+	font-family: var(--text-font-family);
 	font-weight: var(--font-weight-regular);
-	font-size: var(--text-font-size);
+	font-size: var(--font-size-medium);
 	text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--font-family);
+	font-family: var(--text-font-family);
 	font-weight: var(--font-weight-bold);
 }
 
@@ -75,6 +95,8 @@ h2 {
 	font-size: var(--h2-font-size);
 }
 
+/* Links */
+
 a {
 	color: var(--color-white);
 	text-decoration: none;
@@ -82,6 +104,26 @@ a {
 
 a:hover, a:active {
 	color: var(--color-primary);
+}
+
+/* Buttons */
+
+.button {
+	display: inline-block;
+	background: var(--color-primary);
+	font-weight: var(--font-weight-bold);
+	font-family: var(--text-font-family);
+	font-size: var(--button-font-size);
+	text-transform: uppercase;
+	width: 16rem;
+	height: 4.5rem;
+	border-radius: 22px;
+	padding: 1.3rem;
+}
+
+.button:hover, .button:focus {
+	color: var(--color-white);
+	opacity: 0.9;
 }
 
 /* Helpers
@@ -93,46 +135,47 @@ a:hover, a:active {
 }
 
 .visually-hidden:not(:focus):not(:active) {
-	position: absolute !important;
+	position: absolute;
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	white-space: nowrap;
 }
 
 /*** 2. LAYOUT ***/
 
-/* General Layout
+/* Header
    ============================= */
 
-.container {
-	max-width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.background {
+.header {
 	background-image: url('images/headphones_hero_1.jpg');
 	background-repeat: no-repeat;
 	background-position: 90%;
 	background-size: cover;
-	width: 100%;
 	height: 100vh;
 }
-
-/* Header
-   ============================= */
 
 .header-container {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-}
-
-.header-logo {
+	justify-content: space-around;
 	padding: 3rem;
 }
+
+/* Navbar
+   ============================= */
+
+.nav {
+	display: flex;
+	font-weight: var(--font-weight-bold);
+	list-style: none;
+}
+
+.nav .nav-item + .nav-item {
+	margin-left: 3rem;
+}
+
+/* Menu Button
+   ============================= */
 
 .header .menu-icon {
 	display: none;
@@ -150,9 +193,9 @@ a:hover, a:active {
 .header .menu-icon .navicon::before, .header .menu-icon .navicon::after {
 	content: '';
 	display: block;
+	position: absolute;
 	width: 100%;
 	height: 100%;
-	position: absolute;
 	background-color: var(--color-white);
 	transition: all .2s ease-out;
 }
@@ -167,37 +210,12 @@ a:hover, a:active {
 	width: 2rem;
 }
 
-/* Navbar
-   ============================= */
-
-.nav {
-	display: flex;
-	font-weight: var(--font-weight-bold);
-	list-style: none;
-}
-
-.nav .nav-item + .nav-item {
-	margin: 0 0 0 3rem;
-}
-
-.nav .nav-link {
-	display: block;
-	position: relative;
-}
-
-/* Menu button hamburger */
-
 .header .menu-btn {
 	display: none;
 }
 
 .header .menu-btn:checked ~ .navbar-menu {
 	display: block;
-}
-
-.header .menu-btn:checked ~ .navbar-menu .nav {
-	max-height: 100%;
-	overflow: inherit;
 }
 
 .header .menu-btn:checked + .menu-icon .navicon {
@@ -216,52 +234,53 @@ a:hover, a:active {
 	top: 0;
 }
 
+/* Sections
+   ============================= */
+
+   .section-text {
+	position: relative;
+	top: 10rem;
+	line-height: 2.5rem;
+	width: 65rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section-text h1 {
+	margin-bottom: 5rem;
+	line-height: 4rem;
+}
+
+.section-grid {
+	position: relative;
+	top: 15rem;
+}
+
+.grid-list {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
 /* Hero Section
    ============================= */
 
-.section-hero {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.hero-title {
-	position: relative;
+.section-hero .section-text {
 	top: 30rem;
 }
 
-.hero-title h2 {
-	margin-top: -1.5rem;
+.section-hero .section-text h1 {
+	margin-bottom: 1rem;
 }
 
-.hero-body {
-	position: relative;
-	top: 35rem;
-	width: 65rem;
-	line-height: 2.5rem;
-}
-
-/* Button
-   ============================= */
-
-.button {
-	display: inline-block;
-	background: var(--color-primary);
-	font-weight: var(--font-weight-bold);
-	font-family: var(--font-family);
-	font-size: var(--button-font-size);
-	text-transform: uppercase;
-	width: 16rem;
-	height: 4.5rem;
-	border-radius: 22px;
-	padding: 1.5rem;
+.hero-button {
 	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-	margin-top: 3.5rem;
-}
-
-.button:hover, .button:focus {
-	color: var(--color-white);
-	opacity: 0.9;
+	margin-top: 3rem;
+	margin-bottom: 5rem;
 }
 
 /* What We Do Section
@@ -269,27 +288,12 @@ a:hover, a:active {
 
 .section-what {
 	color: var(--color-black);
-	height: 75vh;
 }
 
-.section-title {
-	top: 8.5rem;
-	position: relative;
-}
-
-.section-body {
-	top: 10rem;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+.icon-text {
+	width: 20rem;
+	font-size: var(--font-size-small);
 	line-height: 2.5rem;
-}
-
-.section-column {
-	display: flex;
-	justify-content: space-around;
-	position: relative;
-	top: 15rem;
 }
 
 .icon {
@@ -314,14 +318,6 @@ a:hover, a:active {
 	content: "\e909";
 }
 
-.icon-text {
-	width: 20rem;
-	line-height: 2.5rem;
-	font-size: var(--font-size-small);
-	color: var(--color-black);
-	font-family: var(--font-family);
-}
-
 /* Results Section
    ============================= */
 
@@ -330,26 +326,29 @@ a:hover, a:active {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 90%;
+	position: relative;
+	top: 25rem;
 	height: 75vh;
 }
 
 .pentagon {
-	background-image: url('images/pentagone.png');
+	background-image: url('images/pentagon.svg');
 	background-size: cover;
 	display: flex;
-	align-items: center;
 	height: 17rem;
 	width: 18rem;
+	margin: 3rem;
 }
 
 .pentagon .icon-text {
-	color: var(--color-white);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .pentagon .icon-text h2 {
 	font-size: 4.5rem;
-	position: relative;
-	top: 2rem;
+	margin-bottom: 0;
 }
 
 /* Form Section
@@ -358,11 +357,11 @@ a:hover, a:active {
 .section-form {
 	color: var(--color-black);
 	position: relative;
-	top: 10rem;
-	height: 60vh;
+	top: 30rem;
 	width: 37rem;
 	margin-left: auto;
 	margin-right: auto;
+	height: 50vh;
 }
 
 form {
@@ -371,76 +370,89 @@ form {
 }
 
 fieldset {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
 	border: 0;
+	padding: 0;
 }
 
 input[type="text"], input[type="email"] {
 	position: relative;
-	font-family: var(--font-family);
 	width: 100%;
 	padding: 2rem;
 	border: none;
-	border-bottom: .1rem solid rgb(230, 226, 226);
-	box-shadow: none;
+	border-bottom: .1rem solid var(--color-gray);
 	outline: 0;
 }
 
-/* textarea {
-	overflow: auto;
-	resize: none;
-} */
-
 ::placeholder {
 	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-small);
 	color: var(--color-black);
-	font-size: 1.4rem;
 }
 
-.submit {
-	filter: none;
+.form-button {
 	align-self: center;
+	position: relative;
+	top: 5rem;
 }
 
 /*** 3. MEDIA QUERIES ***/
 
-@media screen and (min-width: 481px) and (max-width: 767px) {
+/* Tablet
+   ============================= */
+
+@media screen and (min-width: 481px) and (max-width: 769px) {
 	/* Base */
 
-	/* Section */
-	.section-column {
-		flex-wrap: wrap;
+	html {
+		font-size: 60%;
+	}
+
+	/* Header */
+
+	.header {
+		background-position: 40%;
+	}
+
+	/* Hero Section */
+
+	.section-hero .section-text {
+		top: 15rem;
+	}
+
+	/* Results Section */
+
+	.section-results {
+		top: 20rem;
+		height: 115vh;
+		background-position: 40%;
+	}
+
+	/* Form Section */
+
+	.section-form {
+		position: relative;
+		top: 30rem;
 	}
 }
 
-/* @media (max-width: 480px) {
-    .header-logo {
-      flex-basis: 70%;
-    }
-  }
+/* Mobile
+   ============================= */
 
-  @media (min-width: 481px) and (max-width: 767px) {
-    .header-logo {
-      flex-basis: 79%;
-    }
-  } */
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
 	/* Base */
 
 	html {
 		font-size: 57%;
 	}
 
-	.background {
+	/* Header */
+
+	.header {
 		background-position: 40%;
 	}
 
-	/* Header */
-
 	.header-container {
+		flex-wrap: wrap;
 		flex-direction: row-reverse;
 	}
 
@@ -449,7 +461,7 @@ input[type="text"], input[type="email"] {
 	}
 
 	.header-logo {
-		width: 100%;
+		flex-basis: 70%;
 	}
 
 	/* Navbar */
@@ -461,81 +473,34 @@ input[type="text"], input[type="email"] {
 
 	.header .nav {
 		flex-direction: column;
-		overflow: hidden;
-		transition: max-height 0.2s ease-out;
-	}
-
-	.header .menu-icon .navicon {
-		display: block;
-		left: 5rem;
 	}
 
 	.nav .nav-item + .nav-item {
-		margin: 1.5rem 0 0;
+		margin-top: 1.5rem;
+		margin-left: 0;
 	}
 
 	/* Hero Section */
 
-	.hero-title {
-		top: 25rem;
-		width: 35rem;
+	.section-hero .section-text {
+		top: 15rem;
 	}
 
-	.hero-title h2 {
-		width: 25rem;
-		margin-top: -1rem;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.hero-body {
-		width: 33.5rem;
-		top: 30rem;
-	}
-
-	.button {
+	.hero-button {
 		margin-top: 1rem;
+		margin-bottom: 3rem;
 	}
 
 	/* Sections */
 
-	.section-title {
-		margin-left: auto;
-		margin-right: auto;
-		top: 7rem;
-	}
-
-	.section-body {
-		top: 9rem;
+	.section-text {
 		width: 30rem;
-	}
-
-	.section-column {
-		flex-direction: column;
-		align-items: center;
-		top: 15rem;
-	}
-
-	/* What We Do Section */
-
-	.section-what {
-		height: 160vh;
 	}
 
 	/* Results Section */
 
 	.section-results {
-		height: 160vh;
-	}
-
-	.pentagon {
-		margin-bottom: 3rem;
-	}
-
-	/* Form Section */
-
-	.submit {
-		position: relative;
-		top: 5rem;
+		height: 170vh;
+		background-position: initial;
 	}
 }
