@@ -258,13 +258,11 @@ a:hover, a:active {
 }
 
 .grid-list {
-	list-style: none;
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	padding-left: 0;
+	list-style: none;
 	margin-left: 2rem;
 	margin-right: 2rem;
+	padding-left: 0;
 }
 
 /* Hero Section
@@ -291,10 +289,15 @@ a:hover, a:active {
 	color: var(--color-black);
 }
 
+.element {
+	padding: 2rem;
+	width: 25%;
+}
+
 .icon-text {
-	width: 20rem;
 	font-size: var(--font-size-small);
 	line-height: 2.5rem;
+	/* width: 20rem; */
 }
 
 .icon {
@@ -336,15 +339,10 @@ a:hover, a:active {
 	background-image: url('images/pentagon.svg');
 	background-size: cover;
 	display: flex;
-	height: 17rem;
-	width: 18rem;
-	margin: 3rem;
-}
-
-.pentagon .icon-text {
-	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	height: 17rem;
+	width: 18rem !important;
+	margin: 3rem;
 }
 
 .pentagon .icon-text h2 {
@@ -374,13 +372,17 @@ fieldset {
 	padding: 0;
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], textarea {
 	position: relative;
 	width: 100%;
 	padding: 2rem;
 	border: none;
 	border-bottom: .1rem solid var(--color-gray);
 	outline: 0;
+}
+
+textarea {
+	height: 6rem;
 }
 
 ::placeholder {
@@ -464,6 +466,19 @@ input[type="text"], input[type="email"] {
 		top: 15rem;
 	}
 
+	/* What We Do Section */
+
+	.grid-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-items: center;
+	}
+
+	.element {
+		width: 75%;
+		text-align: center;
+	}
+
 	/* Results Section */
 
 	.section-results {
@@ -544,14 +559,29 @@ input[type="text"], input[type="email"] {
 
 	/* Sections */
 
+	.grid-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.section-text {
 		width: 30rem;
+	}
+
+	.element {
+		width: 50%;
+	}
+
+	.icon-text {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	/* Results Section */
 
 	.section-results {
-		height: 170vh;
+		height: 150vh;
 		background-position: initial;
 	}
 
