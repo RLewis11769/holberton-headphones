@@ -4,7 +4,7 @@
 
 This project implements a design from scratch using HTML and pure CSS. It duplicates the visual design of a fully functional website that can be seen as a Figma designer file [here](https://www.figma.com/file/gkWRcFqkwtruWZgSfnnHF0/Holberton-School---Headphone-company).
 
-Check out an overview of the final project including screenshots and my review [here](https://github.com/RLewis11769/holberton-headphones/blob/main/project_docs/review.md). This was a school project with a specific structure. I've outlined it [here](https://github.com/RLewis11769/holberton-headphones/blob/main/project_docs/project_structure.md) but [101-index.html](https://github.com/RLewis11769/holberton-headphones/blob/main/101-index.html) contains all of the code from the previous tasks and would be the ideal entry point.
+The [project_docs/](https://github.com/RLewis11769/holberton-headphones/tree/main/project_docs) folder contains all documentation describing my goals, results, and thoughts on the project. Check out an overview of the final project including screenshots and my review [here](https://github.com/RLewis11769/holberton-headphones/blob/main/project_docs/review.md). This was a school project with a specific structure. I've outlined it [here](https://github.com/RLewis11769/holberton-headphones/blob/main/project_docs/project_structure.md) but [101-index.html](https://github.com/RLewis11769/holberton-headphones/blob/main/101-index.html) contains all of the code from the previous tasks and would be the ideal entry point.
 
 ## README Navigation
 

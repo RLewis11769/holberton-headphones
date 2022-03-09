@@ -7,12 +7,15 @@ It shows off my technical skills in the basics of Frontend Web Development. Whil
 ## Final Project
 
 Header/Hero at full width:
+
 ![BannerFull](https://github.com/RLewis11769/holberton-headphones/blob/main/project_docs/My_Banner.png)
 
 Header/Hero at mobile size:
+
 ![BannerMobile](https://github.com/RLewis11769/holberton-headphones/blob/main/project_docs/My_BannerMobile.png)
 
 "What We Do" section at tablet size:
+
 ![WhatWeDoTablet](https://github.com/RLewis11769/holberton-headphones/blob/main/project_docs/My_WhatWeDo.png)
 
 ## Structure
