@@ -45,7 +45,7 @@ git clone git@github.com:RLewis11769/holberton-headphones.git
 Choose an HTML file. I recommend [101-index.html](https://github.com/RLewis11769/holberton-headphones/blob/main/101-index.html)! Install "Live Server" or another server preview extension, run it, and navigate to the open port.
 
 ### 3. View
-Holberton Headphones is now ready to view. See below for details.
+"Holberton Headphones" is now ready to view!
 
 ## Project Rules
 
